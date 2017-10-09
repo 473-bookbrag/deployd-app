@@ -1,0 +1,16 @@
+{
+	"type": "Collection",
+	"directory": "images",
+	"authorization": true,
+	"uniqueFilename": true,
+	"properties": {
+		"imageString": {
+			"name": "imageString",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "imageString",
+			"order": 0
+		}
+	}
+}

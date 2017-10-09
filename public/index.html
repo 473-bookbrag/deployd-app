@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Image Uploader</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-  <h1>Welcome to Deployd!</h1>
-  <p>You've just created a Deployd app. You can add front-end files in the <code>public</code> folder.</p>
-  <p>If you're new to Deployd, have a look at the <a href="http://docs.deployd.com/docs/getting-started/what-is-deployd.html">Getting Started Guide</a> or <a href="http://docs.deployd.com/docs/getting-started/your-first-api.html">Hello World Tutorial</a>.</p>
+  <h1>Image Upload Tester</h1>
+  <form id="image-upload">
+    <input id ="image-input" type="file" accept="image/*" />
+    <input type="submit"/>
+  </form>
+
+<script type="text/javascript" src="scripts/uploadHandler.js" charset="utf-8"></script>
+<script type="text/javascript" src="scripts/main.js" charset="utf-8"></script>
+
 </body>
 </html>
