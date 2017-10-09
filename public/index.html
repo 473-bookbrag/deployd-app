@@ -2,10 +2,21 @@
 <html>
 <head>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="/dpd.js"></script>
+  <script type="text/javascript" src="/follow.js"></script>
+  <script type="text/javascript" src="/login.js"></script>
 </head>
 <body>
-  <h1>Welcome to Deployd!</h1>
-  <p>You've just created a Deployd app. You can add front-end files in the <code>public</code> folder.</p>
-  <p>If you're new to Deployd, have a look at the <a href="http://docs.deployd.com/docs/getting-started/what-is-deployd.html">Getting Started Guide</a> or <a href="http://docs.deployd.com/docs/getting-started/your-first-api.html">Hello World Tutorial</a>.</p>
+  <div id="user-info"></div>
+  <div id="login">
+    <form>
+      <input type="text" placeholder="username" id="username"/>
+      <input type="password" placeholder="password" id="password"/>
+      <button id="login-button">Log in</button>
+    </form>
+  </div>
+  <button id="logout">Log out</button>
+
+  <button data-id="efb24323217cbadd" data-name="Philip" class="follow-user">Follow Philip</button>
 </body>
 </html>
