@@ -2,5 +2,5 @@
 	"type": "Fileupload",
 	"directory": "",
 	"authorization": false,
-	"uniqueFilename": false
+	"uniqueFilename": true
 }
