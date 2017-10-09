@@ -17,31 +17,16 @@
     }
   }
 
-  function sendBase64(file) {
-   var reader = new FileReader();
-   reader.readAsDataURL(file);
-   reader.onload = function () {
-     console.log(reader.result);
-     var data = {};
-     data['imageString'] = reader.result;
-     $.post("http://localhost:2403/images", data, function(serverResponse){
-       data['id'] = serverResponse['id'];
-       var image = new Image();
-       $.get("http://localhost:2403/images/" + data['id'], function(serverResponse){
-         image.src = serverResponse['imageString'];
-         document.body.appendChild(image);
-       });
-     });
-
-
-
-
-   };
-   reader.onerror = function (error) {
-     console.log('Error: ', error);
-   };
-}
-
+  function sendFile(file) {
+    var formData = new FormData();
+    formData.append('uploadedFile', file);
+    $.post({
+      url: "http://localhost:2403/imageupload",
+      contentType: false,
+      processData: false,
+      data: formData,
+    });
+  }
 
   UploadHandler.prototype.addUploadHandler = function(fn) {
     console.log('Setting upload handler for form');
@@ -54,7 +39,7 @@
 
       var file = document.querySelector('#image-input').files[0];
 
-      sendBase64(file);
+      sendFile(file);
 
 
     });
