@@ -32,6 +32,14 @@
 			"required": true,
 			"id": "date",
 			"order": 3
+		},
+		"imagename": {
+			"name": "imagename",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "imagename",
+			"order": 4
 		}
 	}
 }
