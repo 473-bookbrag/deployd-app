@@ -32,6 +32,14 @@
 			"required": false,
 			"id": "description",
 			"order": 3
+		},
+		"date": {
+			"name": "date",
+			"type": "date",
+			"typeLabel": "date",
+			"required": true,
+			"id": "date",
+			"order": 4
 		}
 	}
 }
