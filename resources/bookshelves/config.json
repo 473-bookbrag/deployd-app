@@ -40,6 +40,14 @@
 			"required": false,
 			"id": "imagename",
 			"order": 4
+		},
+		"comments": {
+			"name": "comments",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "comments",
+			"order": 5
 		}
 	}
 }
