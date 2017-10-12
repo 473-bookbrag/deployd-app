@@ -5,7 +5,7 @@
 
     function FormHandler(selector) {
         if (!selector) {
-            throw new Error('No selector provdied');
+            throw new Error('No selector provded');
         }
 
         this.$formElement = $(selector);
@@ -14,7 +14,7 @@
         }
     }
 
-    FormHandler.prototype.addSubmitHandler = function(fn) {
+    FormHandler.prototype.addSubmitHandler = function() {
         this.$formElement.on('submit', function(event) {
             event.preventDefault();
             var newBook = new Book();
