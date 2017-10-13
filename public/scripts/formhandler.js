@@ -20,19 +20,19 @@
             var newBook = new Book();
             var feed = $('[data-book-add="feed"]');
             $(feed).append(newBook.$element);
+            this.reset;
         });
     };
 
     function Book(){
         var comment= document.getElementById('comment-input').value;
         var $div = $('<div></div>', {
-            'data-book-add': 'feed',
-            'class': 'book-feed'
+            'class': 'book-add'
         });
         var $label = $('<label></label>', {'class' : 'feed-label'});
         $label.append(comment);
-        $div.append('comment: ');
-        $div.append($label)
+        $div.append('Brag: ');
+        $div.append($label);
         dpd.users.me(function(me) {
             $div.append(' author: ' + me.username);
             postBook(me.username, comment);

@@ -17,8 +17,7 @@
                 var modTime = new Date(msint).toUTCString().split(' ');
                 var time = modTime[2] + ' ' + modTime[1] + ' ' + modTime[4] + ' ' + modTime[3];
                 var $div = $('<div></div>', {
-                    'data-book-add': 'feed',
-                    'class': 'book-feed'
+                    'class': 'book-add'
                 });
                 var $comment = $('<label></label>', {
                     'class': 'feed-comment'
@@ -28,7 +27,7 @@
                 var $author = $('<label></label>', {
                     'class': 'feed-author'
                 });
-                $author.append('Author: ' + author + ',');
+                $author.append('User: ' + author + ',');
 
                 var $time = $('<label></label>', {
                     'class': 'feed-time'
