@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Links</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+
 </head>
+
 <body>
   <h1>Links</h1>
-  <a href="book.html"><h2>Books</h2></a>
-  <a href="bookshelf.html"><h2>Bookshelves</h2></a>
+  <a data-fancybox data-type="iframe" class="book-iframe" data-src="book.html" href="javascript:;">
+    <h2>Post a Book</h2>
+  </a>
+  <a data-fancybox data-type="iframe" class="bookshelf-iframe" data-src="bookshelf.html" href="javascript:;">
+    <h2>Post a Bookshelf</h2>
+  </a>
+
+  <script type="text/javascript">
+    $('.bookshelf-iframe').fancybox({
+      iframe: {
+        css: {
+          width: '400px',
+          height: '600px'
+        }
+      }
+    });
+
+    $('.book-iframe').fancybox({
+      iframe: {
+        css: {
+          width: '400px',
+          height: '640px'
+        }
+      }
+    });
+  </script>
 </body>
+
+
 </html>
