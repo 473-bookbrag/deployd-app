@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Tests</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+  <h1>Upload Tester</h1>
+  <h2>Bookshelves</h2>
+  <form id="bookshelf-upload">
+    <input type="file" id="bookshelf-image-upload" name="image" accept="image/*" />
+    <br>
+    <label for="bookshelf">Owner</label>
+    <input type ="text" name="owner" required><br>
+    <br>
+    <label for="bookshelf">Name</label>
+    <input type ="text" name="name" required>
+    <br>
+    <label for="description">Description</label>
+    <input type ="text" class="largeTextBox" name="description" width="200" height="300" required>
+    <br>
+    <input type="submit"/>
+  </form>
+  <br><br>
+  <a href="index.html"><h3>Back to Index</h3></a>
+
+<script type="text/javascript" src="scripts/uploadHandler.js" charset="utf-8"></script>
+<script type="text/javascript" src="scripts/bookshelfpage.js" charset="utf-8"></script>
+
+</body>
+</html>

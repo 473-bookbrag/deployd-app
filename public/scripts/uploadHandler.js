@@ -1,3 +1,6 @@
+var globalCollectionUrl;
+var globalImageInputSelector;
+var globalFormSelector;
 (function(window){
   'use strict';
 
@@ -8,8 +11,8 @@
 
   function UploadHandler(formSelector, imageInputSelector, collectionUrl) {
 
-    this.collectionUrl = collectionUrl;
-    this.imageInputSelector = imageInputSelector;
+    globalCollectionUrl = collectionUrl;
+    globalImageInputSelector = imageInputSelector;
     console.log("selected");
     if (!formSelector) {
       throw new Error('No formSelector provdied');
@@ -25,7 +28,7 @@
     'use strict';
     console.log(formData);
     $.post({
-      url: "http://localhost:2403/books",
+      url: globalCollectionUrl,
       contentType: "application/json",
       data: JSON.stringify(formData),
     });
@@ -65,11 +68,13 @@
        console.log(item.name + ' is ' + item.value);
       });
 
+      formData["date"] = new Date().getTime();
+
       console.log("does it get here");
 
 
 
-      var file = document.querySelector('#book-image-upload').files[0];
+      var file = document.querySelector(globalImageInputSelector).files[0];
 
       sendData(formData, file);
 
