@@ -37,7 +37,7 @@
 			"name": "date",
 			"type": "date",
 			"typeLabel": "date",
-			"required": true,
+			"required": false,
 			"id": "date",
 			"order": 4
 		},
