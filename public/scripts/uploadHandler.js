@@ -65,6 +65,8 @@
        console.log(item.name + ' is ' + item.value);
       });
 
+      formData['date'] = new Date().toISOString();
+
       console.log("does it get here");
 
 
