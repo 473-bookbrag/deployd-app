@@ -21,17 +21,17 @@
     }
   }
 
-  function sendRemainder(formData){
+  UploadHandler.prototype.sendRemainder = function(formData){
     'use strict';
     console.log(formData);
     $.post({
-      url: "http://localhost:2403/books",
+      url: this.collectionUrl,
       contentType: "application/json",
       data: JSON.stringify(formData),
     });
   }
 
-  function sendData(formData, file) {
+  UploadHandler.prototype.sendData = function(formData, file) {
     'use strict';
     var imageData = new FormData();
 
@@ -42,21 +42,21 @@
         processData: false,
         contentType: false,
         data: imageData,
-        success: function(val){
+        success: (function(val){
             formData["imagename"] = val[0].filename;
             console.log(formData.imagename);
-            sendRemainder(formData);
-        }
+            this.sendRemainder(formData);
+        }).bind(this)
       });
     }
     else{
-      sendRemainder(formData);
+      this.sendRemainder(formData);
     }
   }
 
   UploadHandler.prototype.addUploadHandler = function(fn) {
     console.log('Setting upload handler for form');
-    this.$formElement.on('submit', function(event) {
+    this.$formElement.on('submit', (function(event) {
       event.preventDefault();
 
       var formData = {};
@@ -71,10 +71,10 @@
 
       var file = this.$formElement.find(this.imageInputSelector)[0].files[0];
 
-      sendData(formData, file);
+      this.sendData(formData, file);
 
 
-    });
+    }).bind(this));
   };
 
   App.UploadHandler = UploadHandler;
