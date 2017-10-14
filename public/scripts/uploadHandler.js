@@ -69,7 +69,7 @@
 
 
 
-      var file = document.querySelector('#book-image-upload').files[0];
+      var file = this.$formElement.find(this.imageInputSelector)[0].files[0];
 
       sendData(formData, file);
 
