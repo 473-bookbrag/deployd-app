@@ -1,3 +1,4 @@
+/*global dpd moment */
 (function(window) {
     var App = window.App || {};
     var $ = window.jQuery;
@@ -13,9 +14,10 @@
             result.forEach(function(i) {
                 var comment = i.comment;
                 var author = i.author;
-                var msint = eval(i.time);
-                var modTime = new Date(msint).toUTCString().split(' ');
-                var time = modTime[2] + ' ' + modTime[1] + ' ' + modTime[4] + ' ' + modTime[3];
+                var msint = Number(i.time);
+                //var modTime = new Date(msint).toUTCString().split(' ');
+                //var time = modTime[2] + ' ' + modTime[1] + ' ' + modTime[4] + ' ' + modTime[3];
+                var time = moment(msint).fromNow();
                 var $div = $('<div></div>', {
                     'class': 'book-add'
                 });
