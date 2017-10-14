@@ -60,7 +60,7 @@
       event.preventDefault();
 
       var formData = {};
-      $(this).serializeArray().forEach(function(item) {
+      $(event.target).serializeArray().forEach(function(item) {
        formData[item.name] = item.value;
        console.log(item.name + ' is ' + item.value);
       });
