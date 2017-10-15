@@ -28,7 +28,7 @@
         if (i.imagename) {
           $img = $('<img src="upload/' + i.imagename + '"></img>', {});
         } else {
-          $img = $('<img src="upload/default-book.png"></img>', {});
+          $img = $('<img src="defaultimages/default-book.png"></img>', {});
         }
 
         $img.addClass('feed-img');
@@ -65,15 +65,10 @@
 
         $div.append($img);
         $div.append($owner);
-        $div.append('<br>');
         $div.append($bookshelf);
-        $div.append('<br>');
         $div.append($title);
-        $div.append('<br>');
         $div.append($author);
-        $div.append('<br>');
         $div.append($description);
-        $div.append('<br>');
         $div.append($date);
 
         var feed = $(selector);
