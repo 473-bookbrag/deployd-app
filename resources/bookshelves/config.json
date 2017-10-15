@@ -24,6 +24,30 @@
 			"required": false,
 			"id": "description",
 			"order": 2
+		},
+		"date": {
+			"name": "date",
+			"type": "date",
+			"typeLabel": "date",
+			"required": true,
+			"id": "date",
+			"order": 3
+		},
+		"imagename": {
+			"name": "imagename",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "imagename",
+			"order": 4
+		},
+		"comments": {
+			"name": "comments",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "comments",
+			"order": 5
 		}
 	}
 }

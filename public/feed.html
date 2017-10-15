@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookbrag</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <div class="panel panel-default">
+        <div data-book-add="feed" class="panel-body">
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="form-class">
+                <span>
+                    <form data-book-add="form" id="book-upload" class="book-upload">
+                        <label for="image">Image</label><br>
+                        <input type="file" id="book-image-upload" name="image" accept="image/*" /><br>
+                        <br>
+                        <label for="bookshelf">Bookshelf</label><br>
+                        <input type="text" name="bookshelf" required><br><br>
+                        <label for="title">Title</label><br>
+                        <input type="text" name="title" required>
+                        <br><br>
+                        <label for="author">Author</label><br>
+                        <input type="text" name="author" required>
+                        <br><br>
+                        <label for="description">Description</label><br>
+                        <input type="text" class="largeTextBox" name="description" width="200" height="300" required>
+                        <br><br>
+                        <input type="submit" />
+                    </form>
+                </span>
+        </div>
+    </div>
+    <script type="text/javascript" src="/dpd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
+    <script src="scripts/bookloader.js"></script>
+    <script src="scripts/uploadHandler.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

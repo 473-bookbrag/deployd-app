@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Deployd login form</title>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+	<div data-book-add="feed" class="panel-body">
+	</div>
+	<div class="login-form">
+	  <div class="container">
+	  	<h1 class="login-text">Login</h1>
+	  	<form>
+	      <label for="username">Username:</label>
+	      <input type="text" id="username" />
+	      <label for="password">Password:</label>
+	      <input type="password" id="password" /><br />
+	      <button type="submit" class="btn btn-primary">Login</button>
+	      <a href="/register.html" class="btn btn-link">sign up</a>
+	    </form>
+	  </div>
+  </div>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="/dpd.js"></script>
+  <script type="text/javascript">
+    dpd.users.me(function(user) {
+      if (user) {
+        location.href = "/feed.html";
+      }
+    });
+
+    $('form').submit(function() {
+      var username = $('#username').val();
+      var password = $('#password').val();
+
+      dpd.users.login({username: username, password: password}, function(session, error) {
+        if (error) {
+          alert(error.message);
+        } else {
+          location.href = "/feed.html";
+        }
+      });
+
+      return false;
+    });
+  </script>
+</body>
+</html>
