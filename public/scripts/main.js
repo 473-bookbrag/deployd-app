@@ -1,9 +1,9 @@
-var POST_SELECTOR = '[data-book-add="form"]';
-var FEED_SELECTOR = '[data-book-add="feed"]';
+var BOOKFEED_SELECTOR = '#book-feed';
+var BOOKSHELFFEED_SELECTOR = '#bookshelf-feed';
 var App = window.App;
-var UploadHandler = App.UploadHandler;
-var bookUploader = new UploadHandler('#book-upload', '#book-image-upload', 'http://localhost:2403/books');
-bookUploader.addUploadHandler(function(fn){});
 var BookLoader = App.BookLoader;
+var BookshelfLoader = App.BookshelfLoader;
 var bookL = new BookLoader();
-bookL.loadBooks(FEED_SELECTOR);
+var bookshelfL = new BookshelfLoader();
+bookL.loadBooks(BOOKFEED_SELECTOR);
+bookshelfL.loadBookshelves(BOOKSHELFFEED_SELECTOR);
