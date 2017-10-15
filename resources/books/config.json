@@ -1,13 +1,21 @@
 {
 	"type": "Collection",
 	"properties": {
-		"comment": {
-			"name": "comment",
+		"bookshelf": {
+			"name": "bookshelf",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
-			"id": "comment",
+			"id": "bookshelf",
 			"order": 0
+		},
+		"title": {
+			"name": "title",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "title",
+			"order": 1
 		},
 		"author": {
 			"name": "author",
@@ -15,15 +23,31 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "author",
-			"order": 1
+			"order": 2
 		},
-		"time": {
-			"name": "time",
+		"description": {
+			"name": "description",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
-			"id": "time",
-			"order": 2
+			"id": "description",
+			"order": 3
+		},
+		"date": {
+			"name": "date",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "date",
+			"order": 4
+		},
+		"comments": {
+			"name": "comments",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "comments",
+			"order": 5
 		}
 	}
 }
