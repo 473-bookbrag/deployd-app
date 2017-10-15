@@ -8,12 +8,10 @@
   <div class="container">
     <h1>Register</h1>
     <form>
-      <label for="username">Username:</label>
-      <input type="text" id="username" />
-      <label for="password">Password:</label>
-      <input type="password" id="password" />
-      <label for="confirm-password">Confirm Password:</label>
-      <input type="password" id="confirm-password" /><br />
+      <label>Username: <input type="text" name="username" /></label>
+      <label>Display Name: <input type="text" name="name" /></label>
+      <label>Password: <input type="password" name="password" /></label>
+      <label>Confirm Password: <input type="password" name="confirm-password" /></label><br />
       <button type="submit" class="btn btn-primary">Sign up</button>
       <a href="/" class="btn btn-link">home</a>
     </form>
@@ -21,19 +19,20 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script type="text/javascript" src="/dpd.js"></script>
   <script type="text/javascript">
-    $('form').submit(function() {
-      var username = $('#username').val();
-      var password = $('#password').val();
-      var confirmPassword = $('#confirm-password').val();
+    $('form').submit(function(event) {
+      var data = {};
+      $(this).serializeArray().forEach(function(item) {
+        data[item.name] = item.value;
+      });
 
-      if (!username) {
+      if (!data['username']) {
         alert("Username is required");
-      } else if (!password) {
+      } else if (!data['password']) {
         alert("Password is required");
-      } else if (password !== confirmPassword) {
+      } else if (data['password'] !== data['confirm-password']) {
         alert("Passwords do not match");
       } else {
-        dpd.users.post({username: username, password: password}, function(user, error) {
+        dpd.users.post(data, function(user, error) {
           if (error) {
             alert(JSON.stringify(error));
           } else {
