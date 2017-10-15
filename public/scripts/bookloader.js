@@ -23,7 +23,7 @@
                 var title = i.title;
                 var author = i.author;
                 var description = i.description;
-                var date = i.date
+                var date = i.date;
 
                 var $div = $('<div></div>', {
                     'class': 'book-add-div'
@@ -42,7 +42,7 @@
                 var $title = $('<label></label>', {
                     'class': 'feed-title'
                 });
-                $title.append('Title: ' + bookshelf + ',');
+                $title.append('Title: ' + title + ',');
 
                 var $author = $('<label></label>', {
                     'class': 'feed-author'
@@ -52,6 +52,7 @@
                 var $description = $('<label></label>', {
                     'class' : 'feed-description'
                 });
+                $description.append('Brag: ' + description + ',');
 
                 var $date = $('<label></label>', {
                     'class': 'feed-date'
