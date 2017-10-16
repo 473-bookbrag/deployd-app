@@ -4,6 +4,8 @@
   var App = window.App || {};
   var $ = window.jQuery;
   var owner;
+  var ownerid;
+  var $dropdown;
 
 
 
@@ -15,7 +17,9 @@
       if (user != null) {
         console.log(user);
         owner = user['name'];
+        ownerid = user['id'];
         console.log(owner);
+        console.log(ownerid);
       }
 
     });
@@ -28,6 +32,21 @@
     if (this.$formElement.length === 0) {
       throw new Error('Could not find element with formSelector: ' + formSelector);
     }
+
+    $dropdown = $('#book-dropdown');
+
+    dpd.bookshelves.get(function(results, error){
+      results.forEach(function(i){
+          if(i.ownerid == ownerid){
+            console.log(i.id);
+            console.log(i.name);
+            var $bookshelfOption = $('<option></option>');
+            $bookshelfOption.attr('value', i.id);
+            $bookshelfOption.append(i.name);
+            $dropdown.append($bookshelfOption);
+          }
+      }).bind(this);
+    });
   }
 
   UploadHandler.prototype.sendRemainder = function(formData) {
@@ -75,7 +94,8 @@
 
       formData['date'] = new Date().toISOString();
 
-        formData['owner'] = owner;
+      formData['owner'] = owner;
+      formData['ownerid'] = ownerid;
 
 
       var file = this.$formElement.find(this.imageInputSelector)[0].files[0];
