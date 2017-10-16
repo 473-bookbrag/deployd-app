@@ -24,9 +24,9 @@
 
                 var $img;
                 if (i.imagename) {
-                  $img = $('<img src="upload/' + i.imagename + '"></img>', {});
+                    $img = $('<img src="upload/' + i.imagename + '"></img>', {});
                 } else {
-                  $img = $('<img src="defaultimages/default-bookshelf.png"></img>', {});
+                    $img = $('<img src="defaultimages/default-bookshelf.png"></img>', {});
                 }
 
                 $img.addClass('feed-img');
