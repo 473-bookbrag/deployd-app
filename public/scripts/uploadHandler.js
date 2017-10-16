@@ -4,7 +4,6 @@
   var App = window.App || {};
   var $ = window.jQuery;
   var owner;
-  var $dropdown;
 
 
 
@@ -30,20 +29,6 @@
       throw new Error('Could not find element with formSelector: ' + formSelector);
     }
 
-    $dropdown = $('#book-dropdown');
-
-    dpd.bookshelves.get(function(results, error){
-      results.forEach(function(i){
-          if(i.owner == owner){
-            console.log(i.id);
-            console.log(i.name);
-            var $bookshelfOption = $('<option></option>');
-            $bookshelfOption.attr('value', i.id);
-            $bookshelfOption.append(i.name);
-            $dropdown.append($bookshelfOption);
-          }
-      }).bind(this);
-    });
   }
 
   UploadHandler.prototype.sendRemainder = function(formData) {
