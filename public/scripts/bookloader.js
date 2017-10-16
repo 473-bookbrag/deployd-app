@@ -13,7 +13,7 @@
             if (err) return console.log(err);
             console.log(result);
             result.reverse().forEach(function(i) {
-                var owner = i.owner;
+                var owner = i.owner.name;
                 var bookshelf = i.bookshelf;
                 var title = i.title;
                 var author = i.author;

@@ -12,7 +12,7 @@
             if (err) return console.log(err);
             console.log(result);
             result.reverse().forEach(function(i) {
-                var owner = i.owner;
+                var owner = i.owner.name;
                 var name = i.name;
                 var imagename = i.imagename;
                 var description = i.description;
