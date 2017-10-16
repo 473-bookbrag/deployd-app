@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Form Tests</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+  <center>
+    <h2 class="title">Show us a Book!</h2></center>
+  <form id="book-upload" class="book-upload">
+    <label for="image">Image</label><br>
+    <input type="file" id="book-image-upload" name="image" accept="image/*" /><br>
+    <br>
+    <label for="bookshelf">Bookshelf</label><br>
+    <input type="text" name="bookshelf" required><br><br>
+    <label for="title">Title</label><br>
+    <input type="text" name="title" required>
+    <br><br>
+    <label for="author">Author</label><br>
+    <input type="text" name="author" required>
+    <br><br>
+    <label for="description">Description</label><br>
+    <textarea name ="description" rows="5" cols="30"></textarea>
+    <br><br>
+    <input type="submit" />
+  </form>
+
+  <script type="text/javascript" src="/dpd.js"></script>
+  <script type="text/javascript" src="scripts/uploadHandler.js" charset="utf-8"></script>
+  <script type="text/javascript" src="scripts/bookpage.js" charset="utf-8"></script>
+
+</body>
+
+</html>

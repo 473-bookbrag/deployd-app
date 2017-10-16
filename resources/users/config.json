@@ -40,6 +40,14 @@
 			"required": false,
 			"id": "followers",
 			"order": 4
+		},
+		"imagename": {
+			"name": "imagename",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "imagename",
+			"order": 3
 		}
 	}
 }

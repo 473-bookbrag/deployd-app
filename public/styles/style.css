@@ -1,0 +1,22 @@
+.bookshelf-upload {
+  margin-left: 50px
+}
+
+.book-upload {
+  margin-left: 50px
+}
+
+.title {
+  margin-top: 40px
+}
+
+.largeTextBox {
+  width: 300px;
+  height: 100px
+}
+
+.feed-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
