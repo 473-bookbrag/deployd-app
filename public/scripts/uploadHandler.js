@@ -4,7 +4,6 @@
   var App = window.App || {};
   var $ = window.jQuery;
   var owner;
-  var ownerid;
   var $dropdown;
 
 
@@ -16,10 +15,8 @@
     dpd.users.me(function(user) {
       if (user != null) {
         console.log(user);
-        owner = user['name'];
-        ownerid = user['id'];
+        owner = user['id'];
         console.log(owner);
-        console.log(ownerid);
       }
 
     });
@@ -37,7 +34,7 @@
 
     dpd.bookshelves.get(function(results, error){
       results.forEach(function(i){
-          if(i.ownerid == ownerid){
+          if(i.owner == owner){
             console.log(i.id);
             console.log(i.name);
             var $bookshelfOption = $('<option></option>');
@@ -95,7 +92,6 @@
       formData['date'] = new Date().toISOString();
 
       formData['owner'] = owner;
-      formData['ownerid'] = ownerid;
 
 
       var file = this.$formElement.find(this.imageInputSelector)[0].files[0];
