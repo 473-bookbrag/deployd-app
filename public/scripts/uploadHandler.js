@@ -75,11 +75,8 @@
 
       formData['date'] = new Date().toISOString();
 
-      if (owner) {
         formData['owner'] = owner;
-      } else {
-        formData['owner'] = 'Guest';
-      }
+
 
       var file = this.$formElement.find(this.imageInputSelector)[0].files[0];
 
