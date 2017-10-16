@@ -17,21 +17,13 @@
 			"id": "owner",
 			"order": 1
 		},
-		"ownerid": {
-			"name": "ownerid",
-			"type": "string",
-			"typeLabel": "string",
-			"required": true,
-			"id": "ownerid",
-			"order": 2
-		},
 		"description": {
 			"name": "description",
 			"type": "string",
 			"typeLabel": "string",
 			"required": false,
 			"id": "description",
-			"order": 3
+			"order": 2
 		},
 		"date": {
 			"name": "date",
@@ -39,7 +31,7 @@
 			"typeLabel": "date",
 			"required": true,
 			"id": "date",
-			"order": 4
+			"order": 3
 		},
 		"imagename": {
 			"name": "imagename",
@@ -47,7 +39,7 @@
 			"typeLabel": "string",
 			"required": false,
 			"id": "imagename",
-			"order": 5
+			"order": 4
 		},
 		"comments": {
 			"name": "comments",
@@ -55,7 +47,7 @@
 			"typeLabel": "array",
 			"required": false,
 			"id": "comments",
-			"order": 6
+			"order": 5
 		}
 	}
 }
