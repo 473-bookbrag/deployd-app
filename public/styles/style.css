@@ -1,3 +1,150 @@
+body, html {
+    height: 100%;
+}
+
+.hero-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.55) url('./img/front-page.jpg') no-repeat center;
+  background-size: cover;
+  height: 60%;
+}
+
+.header-top {
+  padding: 20px;
+}
+
+.header-top .menu-top {
+  cursor: pointer;
+  display: inline-block;
+  transition: all .5s;
+}
+
+.header-top #user-info {
+  float: right;
+  color: #fff;
+}
+
+/*Took some of these from w3schools*/
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(228, 228, 228);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    left: 10%;
+}
+
+.overlay a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #212121;
+    display: block;
+}
+
+.overlay-content a {
+  padding: 10px;
+}
+
+.overlay a:hover, .overlay a:focus {
+    text-decoration: underline;
+}
+
+.overlay .closebtn {
+    margin-top: -10px;
+    position: absolute;
+    font-size: 50px;
+    left: 13px;
+}
+
+/*stole some of this css from Twitter's home page*/
+.btn-top {
+  color: #fff;
+  background: none;
+  border-radius: 100px;
+  border-width: 1px;
+  border-color: #fff;
+  border-style: solid;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: 12px;
+  transition-duration: 0.2s;
+}
+
+.btn-top:hover {
+  color: #212121;
+  background-color: #f1f521;
+  border-color: #f1f521;
+}
+
+.hero-container {
+  color: #fff;
+  padding-top: 5%;
+  padding-left: 10%;
+  text-shadow: 0 0 10px #000;
+}
+
+.hero-container h1 {
+  font-weight: 600;
+  font-size: 80px;
+  color: #f1f521;
+}
+
+.hero-container h1 a {
+  text-decoration: none;
+  color: #f1f521;
+}
+
+.hero-container .btn-top {
+  border-width: 1px;
+  border-color: #fff;
+  border-style: solid;
+}
+
+.hero-container .btn-top:hover {
+  border-color: #f1f521;
+}
+
+.hero-container button {
+  margin-top: 3%;
+  border: none;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.hero-container .register {
+  background-color: #f1f521;
+}
+
+.hero-container .view-reviews {
+  background-color: rgba(255,255,255,0.5);
+  border-style: solid;
+  border-color: #3d3d3d;
+  border-width: 1px;
+  margin-left: 10px;
+}
+
 .bookshelf-upload {
   margin-left: 50px
 }
@@ -16,7 +163,28 @@
 }
 
 .feed-img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.book-add-div {
+  display: inline-block;
+  width: 50%;
+  padding: 10%;
+}
+
+.book-add-div label {
+  display: block;
+}
+
+.book-container {
+  display: block;
+}
+
+.review-info {
+  display: inline-block;
+}
+
+.review-info label {
+  display: block;
 }

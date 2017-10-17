@@ -15,18 +15,18 @@
 	<script type="text/javascript" src="/dpd.js"></script>
 	<script type="text/javascript" src="scripts/follow.js"></script>
 	<script type="text/javascript" src="scripts/login.js"></script>
-	<script type="text/javascript" src="scripts/get_all_users.js"></script>
+
 	<script type="text/javascript" src="scripts/bookshelfloader.js"></script>
 	<script type="text/javascript" src="scripts/bookloader.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
 	<script type="text/javascript" src="scripts/menu.js"></script>
+  <script type="text/javascript" src="scripts/following.js"></script>
 
 	<title>BookBrag!</title>
 
 </head>
 
 <body>
-
 	<div class="hero-bg">
 		<div class="header-top">
 			<div class="menu-top">
@@ -36,7 +36,7 @@
 				<div id="myNav" class="overlay">
 					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 					<div class="overlay-content">
-						<a href="book.html">Post a book review</a>
+            <a href="book.html">Post a book review</a>
 						<a href="bookshelf.html">Post a bookshelf</a>
             <a href="following.html">Currently following</a>
             <a href="followers.html">Followers</a>
@@ -52,53 +52,18 @@
 			<h1><a href="index.html">BookBrag!</a></h1>
 			<h3>Admit you like books publicly, like some kind of loser!</h3>
 
-      <a data-fancybox data-type="iframe" class="book-iframe" data-src="book.html" href="javascript:;">
+			<a data-fancybox data-type="iframe" class="book-iframe" data-src="book.html" href="javascript:;">
     		<button class="btn-top must-log">Post a Book Review</button>
     	</a>
-    	<a data-fancybox data-type="iframe" class="bookshelf-iframe" data-src="bookshelf.html" href="javascript:;">
+			<a data-fancybox data-type="iframe" class="bookshelf-iframe" data-src="bookshelf.html" href="javascript:;">
     		<button class="btn-top must-log">Post a Bookshelf</button>
     	</a>
-	</div>
-</div>
-
-
-<div class="container" style="margin-top:20px;">
-
-
-<h1 style="padding-top: 30px">New Brags!</h1>
-	<div class="double-feed">
-		<div class="panel panel-default">
-			<div id="book-feed">
-			</div>
-		</div>
-
-		<div class="panel panel-default">
-			<div id="bookshelf-feed">
-			</div>
 		</div>
 	</div>
-</div>
-
-
-	<script type="text/javascript">
-		$('.bookshelf-iframe').fancybox({
-			iframe: {
-				css: {
-					width: '400px',
-					height: '500px'
-				}
-			}
-		});
-
-		$('.book-iframe').fancybox({
-			iframe: {
-				css: {
-					width: '400px',
-					height: '680px'
-				}
-			}
-		});
-	</script>
+	<div class="container" style="margin-top:20px;">
+    <h1 style="padding-top: 30px">I am following</h1>
+		<div id="user-list2"></div>
+	</div>
 </body>
 
 </html>

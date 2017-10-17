@@ -16,8 +16,7 @@
 	<script type="text/javascript" src="scripts/follow.js"></script>
 	<script type="text/javascript" src="scripts/login.js"></script>
 	<script type="text/javascript" src="scripts/get_all_users.js"></script>
-	<script type="text/javascript" src="scripts/bookshelfloader.js"></script>
-	<script type="text/javascript" src="scripts/bookloader.js"></script>
+	<script type="text/javascript" src="scripts/my_reviews.js"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
 	<script type="text/javascript" src="scripts/menu.js"></script>
 
@@ -26,7 +25,6 @@
 </head>
 
 <body>
-
 	<div class="hero-bg">
 		<div class="header-top">
 			<div class="menu-top">
@@ -38,10 +36,11 @@
 					<div class="overlay-content">
 						<a href="book.html">Post a book review</a>
 						<a href="bookshelf.html">Post a bookshelf</a>
-            <a href="following.html">Currently following</a>
-            <a href="followers.html">Followers</a>
-            <a href="braggers.html">Browse Braggers</a>
-						<a href="https://github.com/473-bookbrag/documentation">Documentation</a>
+						<a href="#">My Reviews</a>
+						<a href="#">Following</a>
+						<a href="#">Followers</a>
+						<a href="braggers.html">Browse Braggers</a>
+						<a href="#">Documentation</a>
 					</div>
 				</div>
 			</div>
@@ -49,56 +48,32 @@
 		</div>
 		<div class="hero-container">
 			<h3>Welcome to</h3>
-			<h1><a href="index.html">BookBrag!</a></h1>
+			<h1>BookBrag!</h1>
 			<h3>Admit you like books publicly, like some kind of loser!</h3>
 
-      <a data-fancybox data-type="iframe" class="book-iframe" data-src="book.html" href="javascript:;">
+			<a data-fancybox data-type="iframe" class="book-iframe" data-src="book.html" href="javascript:;">
     		<button class="btn-top must-log">Post a Book Review</button>
     	</a>
-    	<a data-fancybox data-type="iframe" class="bookshelf-iframe" data-src="bookshelf.html" href="javascript:;">
+			<a data-fancybox data-type="iframe" class="bookshelf-iframe" data-src="bookshelf.html" href="javascript:;">
     		<button class="btn-top must-log">Post a Bookshelf</button>
     	</a>
-	</div>
-</div>
-
-
-<div class="container" style="margin-top:20px;">
-
-
-<h1 style="padding-top: 30px">New Brags!</h1>
-	<div class="double-feed">
-		<div class="panel panel-default">
-			<div id="book-feed">
-			</div>
-		</div>
-
-		<div class="panel panel-default">
-			<div id="bookshelf-feed">
-			</div>
 		</div>
 	</div>
-</div>
+	<div class="container" style="margin-top:20px;">
+    <h1 style="padding-top: 30px">New Brags!</h1>
+    	<div class="double-feed">
+    		<div class="panel panel-default">
+    			<div id="book-feed">
+    			</div>
+    		</div>
 
-
-	<script type="text/javascript">
-		$('.bookshelf-iframe').fancybox({
-			iframe: {
-				css: {
-					width: '400px',
-					height: '500px'
-				}
-			}
-		});
-
-		$('.book-iframe').fancybox({
-			iframe: {
-				css: {
-					width: '400px',
-					height: '680px'
-				}
-			}
-		});
-	</script>
+    		<div class="panel panel-default">
+    			<div id="bookshelf-feed">
+    			</div>
+    		</div>
+    	</div>
+    </div>
+	</div>
 </body>
 
 </html>
