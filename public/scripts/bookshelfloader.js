@@ -49,7 +49,7 @@
                 var $date = $('<label></label>', {
                     'class': 'feed-date'
                 });
-                $date.append('Date: ' + date);
+                $date.append('Date: ' + new Date(date).toLocaleString());
 
                 $div.append($img);
                 $div.append($owner);
