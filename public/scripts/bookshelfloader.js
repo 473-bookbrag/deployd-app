@@ -34,17 +34,17 @@
                 var $owner = $('<label></label>', {
                     'class': 'feed-owner'
                 });
-                $owner.append('Owner: ' + owner + ',');
+                $owner.append('Owner: ' + owner);
 
                 var $name = $('<label></label>', {
                     'class': 'feed-name'
                 });
-                $name.append('Name: ' + name + ',');
+                $name.append('Name: ' + name);
 
                 var $description = $('<label></label>', {
                     'class' : 'feed-description'
                 });
-                $description.append('Brag: ' + description + ',');
+                $description.append('Brag: ' + description);
 
                 var $date = $('<label></label>', {
                     'class': 'feed-date'

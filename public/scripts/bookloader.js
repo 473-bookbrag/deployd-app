@@ -36,27 +36,27 @@
                 var $owner = $('<label></label>', {
                     'class': 'feed-owner'
                 });
-                $owner.append('Owner: ' + owner + ',');
+                $owner.append('Owner: ' + owner);
 
                 var $bookshelf = $('<label></label>', {
                     'class': 'feed-bookshelf'
                 });
-                $bookshelf.append('Bookshelf: ' + bookshelf + ',');
+                $bookshelf.append('Bookshelf: ' + bookshelf);
 
                 var $title = $('<label></label>', {
                     'class': 'feed-title'
                 });
-                $title.append('Title: ' + title + ',');
+                $title.append('Title: ' + title);
 
                 var $author = $('<label></label>', {
                     'class': 'feed-author'
                 });
-                $author.append('Author: ' + author + ',');
+                $author.append('Author: ' + author);
 
                 var $description = $('<label></label>', {
                     'class': 'feed-description'
                 });
-                $description.append('Brag: ' + description + ',');
+                $description.append('Brag: ' + description);
 
                 var $date = $('<label></label>', {
                     'class': 'feed-date'
