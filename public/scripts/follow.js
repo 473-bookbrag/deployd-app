@@ -23,7 +23,7 @@ $(document).on('click', '.follow-user', function() {
       });
 
       dpd.users.put(target_id, {
-        following: {$push: me.id}
+        followers: {$push: me.id}
       });
     } else {
       alert('You are already following ' + target_user);
