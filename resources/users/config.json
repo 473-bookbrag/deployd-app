@@ -25,6 +25,22 @@
 			"id": "website",
 			"order": 2
 		},
+		"following": {
+			"name": "following",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "following",
+			"order": 3
+		},
+		"followers": {
+			"name": "followers",
+			"type": "array",
+			"typeLabel": "array",
+			"required": false,
+			"id": "followers",
+			"order": 4
+		},
 		"imagename": {
 			"name": "imagename",
 			"type": "string",
