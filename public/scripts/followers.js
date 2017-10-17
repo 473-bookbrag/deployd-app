@@ -5,7 +5,7 @@ dpd.users.me(function(r, e) {
             dpd.users.get(r.followers[i], function(result) {
                 var name = result.name;
                 x += '<span style=\"display:block\">' + name + '</span>';
-                $('#user-list2').html(x);
+                $('#user-list3').html(x);
             });
         }
     }
